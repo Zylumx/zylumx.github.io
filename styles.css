@@ -417,7 +417,8 @@ a:hover {
   letter-spacing: -0.02em;
 }
 
-.skill-list {
+.skill-list,
+.project-tags {
   display: flex;
   flex-wrap: wrap;
   gap: 0.45rem;
@@ -426,7 +427,12 @@ a:hover {
   padding: 0;
 }
 
-.skill-list li {
+.project-tags {
+  margin-top: 1.15rem;
+}
+
+.skill-list li,
+.project-tags li {
   padding: 0.28rem 0.62rem;
   border-radius: 999px;
   background: var(--accent-softer);
@@ -507,6 +513,10 @@ a:hover {
   gap: 1rem;
 }
 
+.project-card:first-child {
+  grid-column: 1 / -1;
+}
+
 .project-card {
   display: flex;
   flex-direction: column;
@@ -553,13 +563,13 @@ a:hover {
   font-size: 0.9rem;
 }
 
-.project-card ul {
+.project-card ul:not(.project-tags) {
   margin: 0;
   padding-left: 1.15rem;
   color: var(--muted);
 }
 
-.project-card li + li {
+.project-card ul:not(.project-tags) li + li {
   margin-top: 0.5rem;
 }
 
