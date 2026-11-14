@@ -7,7 +7,7 @@
   --line: rgba(164, 187, 210, 0.14);
   --text: #e8eef6;
   --muted: #9aabc0;
-  --faint: #6e8096;
+  --faint: #7b8da4; /* 4.6:1 on cards and card hover; #6e8096 was 4.19:1 */
   --accent: #3ee0c2;
   --accent-strong: #2ee6c2;
   --accent-soft: rgba(62, 224, 194, 0.12);
@@ -175,7 +175,7 @@ a:hover {
   padding: 0;
 }
 
-.site-nav a {
+.site-nav a:not(.btn) {
   color: var(--muted);
   text-decoration: none;
   font-size: 0.92rem;
@@ -184,8 +184,8 @@ a:hover {
   border-radius: 8px;
 }
 
-.site-nav a:hover,
-.site-nav a[aria-current="true"] {
+.site-nav a:not(.btn):hover,
+.site-nav a:not(.btn)[aria-current="true"] {
   color: var(--text);
   background: rgba(255, 255, 255, 0.04);
 }
@@ -725,7 +725,7 @@ a:hover {
     gap: 0.15rem;
   }
 
-  .site-nav a {
+  .site-nav a:not(.btn) {
     display: block;
     padding: 0.7rem 0.5rem;
   }
