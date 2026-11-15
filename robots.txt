@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://zylumx.github.io/sitemap.xml
